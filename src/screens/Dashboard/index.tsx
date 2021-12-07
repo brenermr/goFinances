@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, H1, Title} from './styles'
+import { Container, Title} from './styles'
 
 export function Dashboard(){
     return(
