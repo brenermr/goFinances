@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-
+import AppLoading from 'expo-app-loading';
 import {
   useFonts,
   Poppins_400Regular,
@@ -12,7 +12,6 @@ import {
 
 import theme from './src/global/styles/theme'
 import { Dashboard } from './src/screens/Dashboard/';
-import AppLoading from 'expo-app-loading';
 
 
 export default function App() {
