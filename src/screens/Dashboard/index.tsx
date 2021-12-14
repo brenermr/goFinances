@@ -1,4 +1,7 @@
+// Native Components
 import React from 'react'
+
+// My Components
 import { 
     Container, 
     Header,
@@ -15,14 +18,13 @@ export function Dashboard(){
         <Container>
             <Header>
                 <UserWrapper>
-                    
-                <UserInfo>
-                    <Photo source={{uri:'https://avatars.githubusercontent.com/u/65732426?v=4'}}/>
-                    <User>
-                        <UserGreeting>Olá,</UserGreeting>
-                        <UserName>Caique</UserName>
-                    </User>
-                </UserInfo>
+                    <UserInfo>
+                        <Photo source={{uri:'https://avatars.githubusercontent.com/u/65732426?v=4'}}/>
+                        <User>
+                            <UserGreeting>Olá,</UserGreeting>
+                            <UserName>Caique</UserName>
+                        </User>
+                    </UserInfo>
                 </UserWrapper>
             </Header>
         </Container>
