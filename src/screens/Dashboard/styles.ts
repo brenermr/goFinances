@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 import {Feather} from '@expo/vector-icons'
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import Constants  from 'expo-constants';
+
 
 
 export const Container = styled.View`
@@ -12,23 +14,22 @@ export const Header = styled.View`
     width: 100%;
     background-color: ${({theme})=>theme.colors.primary};
     height: ${RFPercentage(42)}px;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 ` 
 
 export const UserWrapper = styled.View`
     width:100%;
+    margin-top:${RFValue(Constants.statusBarHeight)}px;
     padding: ${RFValue(0)}px ${RFValue(24)}px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
 `;
 
 export const UserInfo= styled.View`
     flex-direction: row;
     align-items: center;
-    
-    
     /* margin: ${RFValue(40)}px ${RFValue(25)}px ; */
 `
 export const Photo= styled.Image`
@@ -61,5 +62,7 @@ export const HighlightCards = styled.ScrollView.attrs({
         paddingLeft:24
     }
 })`
-    margin-top: -100px;
+    width: 100%;
+    position: absolute;
+    margin-top: ${RFPercentage(20)}px;
 `
