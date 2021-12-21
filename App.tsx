@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
 
-// My Fontes
+// My Fonts
 import {
   useFonts,
   Poppins_400Regular,
