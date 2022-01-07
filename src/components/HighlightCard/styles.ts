@@ -11,7 +11,7 @@ export const Container = styled.View<TypeProps>`
     padding: 0px 23px;
     width: ${RFValue(320)}px;
     /* height: ${RFValue(200)}px; */
-    background-color: ${({theme, type})=> type === 'total' ? theme.colors.secondary : theme.colors.shape };
+    background-color: ${({theme, type}) => type === 'total' ? theme.colors.secondary : theme.colors.shape };
     border-radius: 5px;
     padding-bottom: ${RFValue(10)}px;
     margin-right: 16px;
@@ -22,10 +22,10 @@ export const Header=styled.View`
     flex-direction: row;
     justify-content: space-between;
 `
-export const Title=styled.Text`
+export const Title=styled.Text<TypeProps>`
     font-family: ${({theme})=>theme.fonts.regular};
     font-size: ${RFValue(15)}px;
-    color: ${({theme})=>theme.colors.title};
+    color: ${({theme, type})=> type === 'total' ? theme.colors.shape : theme.colors.title};
 `
 export const Icon=styled(Feather)<TypeProps>`
     font-size: ${RFValue(40)}px;
@@ -44,14 +44,14 @@ export const Icon=styled(Feather)<TypeProps>`
 export const Footer=styled.View`
     padding: 30px 0px;
 `
-export const Amount=styled.Text`
+export const Amount=styled.Text<TypeProps>`
     font-family: ${({theme})=>theme.fonts.medium};
     font-size: ${RFValue(32)}px;
-    color:${({theme})=>theme.colors.title};
+    color: ${({theme, type})=> type === 'total' ? theme.colors.shape : theme.colors.title};
 `
-export const LastTransaction=styled.Text`
+export const LastTransaction=styled.Text<TypeProps>`
     font-family: ${({theme})=>theme.fonts.regular};
     font-size: ${RFValue(12)}px;
-    color:${({theme})=>theme.colors.text }
+    color: ${({theme, type})=> type === 'total' ? theme.colors.shape : theme.colors.title};
 
 `
