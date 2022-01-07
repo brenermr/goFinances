@@ -34,9 +34,9 @@ export function Dashboard(){
             </Header>
             <HighlightCards 
             >
-                <HighlightCard/>
-                <HighlightCard/>
-                <HighlightCard/>
+                <HighlightCard title='Entradas' amount='R$ 17.000,00' lastTransaction='13 de Abril' type='up'/>
+                <HighlightCard title='Saidas' amount='R$ 2.400,00' lastTransaction='15 de Abril' type='down'/>
+                <HighlightCard title='Total' amount='R$ 14.600,00' lastTransaction='01 à 30 de Abril' type='total'/>
             </HighlightCards>
         </Container>
     )
