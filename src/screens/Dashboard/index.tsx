@@ -1,5 +1,6 @@
 // Native Components
 import React from 'react'
+import { ScrollView } from 'react-native'
 
 // My Components
 import {HighlightCard} from '../../components/HighlightCard'
@@ -43,7 +44,12 @@ export function Dashboard(){
             </HighlightCards>
             <Transactions>
                 <Title>Listagem</Title>
-                <TransactionCard/>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <TransactionCard type='Entradas'/>
+                    <TransactionCard type='Saidas'/>
+                    <TransactionCard type='Saidas'/>
+                    <TransactionCard type='Entradas'/>
+                </ScrollView>
             </Transactions>
         </Container>
     )

@@ -10,13 +10,17 @@ import {
     Date,
 } from "./style";
 
-export function TransactionCard(){
+interface PropsTransactionCard{
+    type: 'Entradas'|'Saidas'
+}
+
+export function TransactionCard({type}:PropsTransactionCard){
     return(
         <Container>
             <Title>
                 Desenvolvimento de app
             </Title>
-            <Amount>
+            <Amount Transactions={type}>
                 R$12.000,00
             </Amount>
             <Footer>

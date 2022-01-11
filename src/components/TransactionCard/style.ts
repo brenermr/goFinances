@@ -1,8 +1,13 @@
-import styled from "styled-components/native";
+import styled, {css} from "styled-components/native";
 import {Feather} from "@expo/vector-icons" 
 import { RFValue } from "react-native-responsive-fontsize";
 
+interface PropsCards{
+    Transactions: 'Entradas'|'Saidas'
+}
+
 export const Container = styled.View`
+    margin-top:16px;
     padding: 17px 24px;
     background-color:${({theme})=>theme.colors.shape};
     border-radius: 5px;
@@ -12,12 +17,14 @@ export const Title = styled.Text`
     color:${({theme})=>theme.colors.title};
     font-size: ${RFValue(14)}px;
 `
-export const Amount = styled.Text`
+export const Amount = styled.Text<PropsCards>`
+    margin-top:2px;
     font-size: ${RFValue(20)}px;
     font-family: ${({theme})=>theme.fonts.regular};
-    color:${({theme})=>theme.colors.sucess};
+    color:${({theme, Transactions})=> Transactions === 'Entradas' ? theme.colors.sucess: theme.colors.attention };
 `
 export const Footer = styled.View`
+    margin-top: 19px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
