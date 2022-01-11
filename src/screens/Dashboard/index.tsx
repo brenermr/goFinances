@@ -3,6 +3,7 @@ import React from 'react'
 
 // My Components
 import {HighlightCard} from '../../components/HighlightCard'
+import {TransactionCard} from '../../components/TransactionCard'
 
 import { 
     Container, 
@@ -42,6 +43,7 @@ export function Dashboard(){
             </HighlightCards>
             <Transactions>
                 <Title>Listagem</Title>
+                <TransactionCard/>
             </Transactions>
         </Container>
     )
