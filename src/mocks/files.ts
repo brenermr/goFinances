@@ -15,7 +15,25 @@ export const Data =
             amount:'R$ 50,00',
             description:'Compras',
             date:'18/05/2022',
-            icon:"dollar-sign",
+            icon:"shopping-cart",
+            type: "Saidas"
+        },
+        {
+            id:3,
+            title:'Hamburguer',
+            amount:'R$ 50,00',
+            description:'Compras',
+            date:'18/05/2022',
+            icon:"shopping-cart",
+            type: "Saidas"
+        },
+        {
+            id:4,
+            title:'Hamburguer',
+            amount:'R$ 50,00',
+            description:'Compras',
+            date:'18/05/2022',
+            icon:"shopping-cart",
             type: "Saidas"
         }
     ]

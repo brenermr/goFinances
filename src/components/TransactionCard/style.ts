@@ -10,6 +10,7 @@ export const Container = styled.View`
     padding: 17px 24px;
     background-color:${({theme})=>theme.colors.shape};
     border-radius: 5px;
+    margin-bottom: 10px;
 `
 export const Title = styled.Text`
     font-family:${({theme})=>theme.fonts.regular};
