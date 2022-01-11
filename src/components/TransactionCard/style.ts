@@ -3,11 +3,10 @@ import {Feather} from "@expo/vector-icons"
 import { RFValue } from "react-native-responsive-fontsize";
 
 interface PropsCards{
-    Transactions: 'Entradas'|'Saidas'
+    Transactions: string;
 }
 
 export const Container = styled.View`
-    margin-top:16px;
     padding: 17px 24px;
     background-color:${({theme})=>theme.colors.shape};
     border-radius: 5px;

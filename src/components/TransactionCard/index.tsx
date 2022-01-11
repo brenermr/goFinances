@@ -11,24 +11,29 @@ import {
 } from "./style";
 
 interface PropsTransactionCard{
-    type: 'Entradas'|'Saidas'
+    title: string;
+    amount:string;
+    description:string;
+    date:string;
+    icon:string;
+    type: string
 }
 
-export function TransactionCard({type}:PropsTransactionCard){
+export function TransactionCard({title, amount, description, date, icon, type}:PropsTransactionCard){
     return(
         <Container>
             <Title>
-                Desenvolvimento de app
+                {title}
             </Title>
             <Amount Transactions={type}>
-                R$12.000,00
+                {amount}
             </Amount>
             <Footer>
                 <Infos>
-                    <Icon name='dollar-sign'/>
-                    <Description>Vendas</Description>
+                    <Icon name={icon}/>
+                    <Description>{description}</Description>
                 </Infos>
-                <Date>13/04/2020</Date>
+                <Date>{date}</Date>
             </Footer>
         </Container>
     )
