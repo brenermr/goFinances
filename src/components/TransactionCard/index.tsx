@@ -15,7 +15,7 @@ interface Category{
     icon:string
 }
 
-interface PropsTransactionCard{
+export interface TransactionCardProps{
     title: string;
     amount:string;
     category: Category;
@@ -23,7 +23,7 @@ interface PropsTransactionCard{
     type: string;
 }
 
-export function TransactionCard({title, amount, category, date, type}:PropsTransactionCard){
+export function TransactionCard({title, amount, category, date, type}:TransactionCardProps){
     return(
         <Container>
             <Title>

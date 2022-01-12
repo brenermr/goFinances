@@ -5,7 +5,7 @@ import React from 'react'
 import { FlatList } from 'react-native'
 // My Components
 import {HighlightCard} from '../../components/HighlightCard'
-import {TransactionCard} from '../../components/TransactionCard'
+import {TransactionCard, TransactionCardProps} from '../../components/TransactionCard'
 import { Data } from '../../mocks/transactions'
 import { 
     Container, 
