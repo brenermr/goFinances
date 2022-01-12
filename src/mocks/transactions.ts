@@ -1,7 +1,7 @@
 export const Data =
     [
         {
-            id:1,
+            id:"1",
             title:'Desenvolvimento de APP',
             amount:'R$ 12.000,00',
             description:'Vendas',
@@ -10,25 +10,25 @@ export const Data =
             type: "Entradas"
         },
         {
-            id:2,
+            id:"2",
             title:'Hamburguer',
             amount:'R$ 50,00',
             description:'Compras',
             date:'18/05/2022',
-            icon:"shopping-cart",
+            icon:"coffee",
             type: "Saidas"
         },
         {
-            id:3,
-            title:'Hamburguer',
-            amount:'R$ 50,00',
-            description:'Compras',
+            id:"3",
+            title:'Teclado',
+            amount:'R$ 250,00',
+            description:'Tecnologia',
             date:'18/05/2022',
-            icon:"shopping-cart",
+            icon:"shopping-bag",
             type: "Saidas"
         },
         {
-            id:4,
+            id:"4",
             title:'Hamburguer',
             amount:'R$ 50,00',
             description:'Compras',

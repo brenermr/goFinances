@@ -4,35 +4,40 @@ import {
     Title,
     Amount,
     Footer,
-    Infos,
+    Category,
     Icon,
-    Description,
+    CategoryName,
     Date,
 } from "./style";
+
+interface Category{
+    name:string;
+    icon:string
+}
 
 interface PropsTransactionCard{
     title: string;
     amount:string;
-    description:string;
+    category: Category;
     date:string;
-    icon:string;
-    type: string
+    type: string;
 }
 
-export function TransactionCard({title, amount, description, date, icon, type}:PropsTransactionCard){
+export function TransactionCard({title, amount, category, date, type}:PropsTransactionCard){
     return(
         <Container>
             <Title>
                 {title}
             </Title>
             <Amount Transactions={type}>
+                {type !== 'Entradas' && '- '}
                 {amount}
             </Amount>
             <Footer>
-                <Infos>
-                    <Icon name={icon}/>
-                    <Description>{description}</Description>
-                </Infos>
+                <Category>
+                    <Icon name={category.icon}/>
+                    <CategoryName>{category.name}</CategoryName>
+                </Category>
                 <Date>{date}</Date>
             </Footer>
         </Container>

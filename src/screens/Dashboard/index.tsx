@@ -1,11 +1,12 @@
 // Native Components
 import React from 'react'
-import { FlatList, ScrollView } from 'react-native'
 
+
+import { FlatList } from 'react-native'
 // My Components
 import {HighlightCard} from '../../components/HighlightCard'
 import {TransactionCard} from '../../components/TransactionCard'
-import { Data } from '../../mocks/files'
+import { Data } from '../../mocks/transactions'
 import { 
     Container, 
     Header,
@@ -19,6 +20,7 @@ import {
     HighlightCards,
     Transactions,
     Title,
+    TransactionList
 } from './styles'
 
 export function Dashboard(){
@@ -45,10 +47,22 @@ export function Dashboard(){
             <Transactions>
                 <Title>Listagem</Title>
                 <FlatList
+                    showsVerticalScrollIndicator={false}
                     data={Data}
                     renderItem={({item})=>(
-                        <TransactionCard title={item.title} amount={item.amount} date={item.date} icon={item.icon} description={item.description} type={item.type}/>
+                        <TransactionCard 
+                        title={item.title} 
+                        amount={item.amount} 
+                        date={item.date}
+                        category={
+                        {   
+                            name:item.description,
+                            icon:item.icon
+                        }
+                        }
+                        type={item.type}/>
                     )}
+                    keyExtractor={item=> item.id}
                 />
             </Transactions>
         </Container>
