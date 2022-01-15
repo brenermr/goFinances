@@ -1,9 +1,9 @@
 // Native Components
 import React from 'react'
-
+import { FlatList } from 'react-native'
 // My Components
+import { TransactionCard } from '../../components/TransactionCard'
 import {HighlightCard} from '../../components/HighlightCard'
-
 import { 
     Container, 
     Header,
@@ -18,6 +18,7 @@ import {
     Transactions,
     Title,
 } from './styles'
+import { Data } from '../../mocks/transactions'
 
 export function Dashboard(){
     return(
@@ -42,6 +43,13 @@ export function Dashboard(){
             </HighlightCards>
             <Transactions>
                 <Title>Listagem</Title>
+                <FlatList showsVerticalScrollIndicator={false}
+                    data={Data}
+                    keyExtractor={item=>item.id}
+                    renderItem={({item})=>(
+                        <TransactionCard type={item.type} title={item.title} amount={item.amount} categoryname={item.categoryname} date={item.date}/>
+                    )}
+                />
             </Transactions>
         </Container>
     )
