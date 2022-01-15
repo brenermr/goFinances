@@ -1,48 +1,47 @@
-import styled,{css} from "styled-components/native";
-import {Feather} from "@expo/vector-icons"
+import styled, {css} from "styled-components/native";
+import {Feather} from "@expo/vector-icons" 
 import { RFValue } from "react-native-responsive-fontsize";
 
-interface Props{
-    type: string
+interface PropsCards{
+    Transactions: string;
 }
 
 export const Container = styled.View`
-    margin-top:16px;
-    border-radius: 5px;
+    padding: 17px 24px;
     background-color:${({theme})=>theme.colors.shape};
-    padding: ${RFValue(17)}px ${RFValue(27)}px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 `
-export const Title= styled.Text`
-    font-size: ${RFValue(14)}px;
+export const Title = styled.Text`
+    font-family:${({theme})=>theme.fonts.regular};
     color:${({theme})=>theme.colors.title};
-    font-family:${({theme})=>theme.fonts.regular};
-`
-export const Amount= styled.Text<Props>`
-    font-size: ${RFValue(20)}px;
-    margin-top:2px;
-    color:${({theme,type})=> type === 'Entradas' ? theme.colors.sucess : theme.colors.attention} ;
-    font-family:${({theme})=>theme.fonts.regular};
-`
-export const Footer=  styled.View`
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top:19px;
-`
-export const Category=  styled.View`
-    flex-direction: row;
-    align-items: center;
-`
-export const Icon= styled(Feather)`
-    font-size: ${RFValue(20)}px;
-    margin-right: 17px;
-    color: ${({theme})=>theme.colors.text};
-`
-export const CategoryName=styled.Text`
     font-size: ${RFValue(14)}px;
-    color: ${({theme})=>theme.colors.text};
 `
+export const Amount = styled.Text<PropsCards>`
+    margin-top:2px;
+    font-size: ${RFValue(20)}px;
+    font-family: ${({theme})=>theme.fonts.regular};
+    color:${({theme, Transactions})=> Transactions === 'Entradas' ? theme.colors.sucess: theme.colors.attention };
+`
+export const Footer = styled.View`
+    margin-top: 19px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`
+export const Category = styled.View`
+    flex-direction: row;
+    align-items: center;
+`
+export const Icon = styled(Feather)`
+    font-size: ${RFValue(14)}px;
+    color:${({theme})=>theme.colors.text};
+    margin-right: 17px;
+`
+export const CategoryName = styled.Text`
+    font-size: ${RFValue(14)}px;
+    color:${({theme})=>theme.colors.text};`
 export const Date = styled.Text`
     font-size: ${RFValue(14)}px;
-    color: ${({theme})=>theme.colors.text};
+    color:${({theme})=>theme.colors.text};
 `

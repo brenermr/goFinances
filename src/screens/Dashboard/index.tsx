@@ -1,9 +1,19 @@
 // Native Components
 import React from 'react'
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e2917738f428b053a8cb4ce1b8a1c183e0f64ff4
 import { FlatList } from 'react-native'
 // My Components
 import { TransactionCard } from '../../components/TransactionCard'
 import {HighlightCard} from '../../components/HighlightCard'
+<<<<<<< HEAD
+=======
+import {TransactionCard, TransactionCardProps} from '../../components/TransactionCard'
+import { Data } from '../../mocks/transactions'
+>>>>>>> e2917738f428b053a8cb4ce1b8a1c183e0f64ff4
 import { 
     Container, 
     Header,
@@ -17,6 +27,7 @@ import {
     HighlightCards,
     Transactions,
     Title,
+    TransactionList
 } from './styles'
 import { Data } from '../../mocks/transactions'
 
@@ -43,12 +54,32 @@ export function Dashboard(){
             </HighlightCards>
             <Transactions>
                 <Title>Listagem</Title>
+<<<<<<< HEAD
                 <FlatList showsVerticalScrollIndicator={false}
                     data={Data}
                     keyExtractor={item=>item.id}
                     renderItem={({item})=>(
                         <TransactionCard type={item.type} title={item.title} amount={item.amount} categoryname={item.categoryname} date={item.date}/>
                     )}
+=======
+                <FlatList
+                    showsVerticalScrollIndicator={false}
+                    data={Data}
+                    renderItem={({item})=>(
+                        <TransactionCard 
+                        title={item.title} 
+                        amount={item.amount} 
+                        date={item.date}
+                        category={
+                        {   
+                            name:item.description,
+                            icon:item.icon
+                        }
+                        }
+                        type={item.type}/>
+                    )}
+                    keyExtractor={item=> item.id}
+>>>>>>> e2917738f428b053a8cb4ce1b8a1c183e0f64ff4
                 />
             </Transactions>
         </Container>

@@ -8,32 +8,35 @@ import {
     Icon,
     CategoryName,
     Date,
-
 } from "./style";
 
-interface category{
-    name:string,
+interface Category{
+    name:string;
     icon:string
 }
 
-interface Props{
-    title:string,
-    amount:string,
-    categoryname: category,
-    date:string,
-    type: string
+export interface TransactionCardProps{
+    title: string;
+    amount:string;
+    category: Category;
+    date:string;
+    type: string;
 }
 
-export function TransactionCard({title, amount, categoryname, date, type}:Props){
+export function TransactionCard({title, amount, category, date, type}:TransactionCardProps){
     return(
         <Container>
-            <Title>{title}</Title>
-            <Amount type={type}>{amount}</Amount>
-
+            <Title>
+                {title}
+            </Title>
+            <Amount Transactions={type}>
+                {type !== 'Entradas' && '- '}
+                {amount}
+            </Amount>
             <Footer>
                 <Category>
-                    <Icon name={categoryname.icon}/>
-                    <CategoryName>{categoryname.name}</CategoryName>
+                    <Icon name={category.icon}/>
+                    <CategoryName>{category.name}</CategoryName>
                 </Category>
                 <Date>{date}</Date>
             </Footer>

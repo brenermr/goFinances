@@ -1,57 +1,39 @@
-export const Data = [
-    {
-        id:'1',
-        title:'Desenvolvimento de App',
-        amount:'$15.000,00',
-        categoryname: {
-            name:'Vendas',
-            icon:'dollar-sign'
+export const Data =
+    [
+        {
+            id:"1",
+            title:'Desenvolvimento de APP',
+            amount:'R$ 12.000,00',
+            description:'Vendas',
+            date:'13/04/2022',
+            icon:"dollar-sign",
+            type: "Entradas"
         },
-        date:'14/01/2022',
-        type: 'Entradas'
-    },
-    {
-        id:'2',
-        title:'SoteroBurguer',
-        amount:'$50,00',
-        categoryname: {
-            name:'Vendas',
-            icon:'coffee'
+        {
+            id:"2",
+            title:'Hamburguer',
+            amount:'R$ 50,00',
+            description:'Compras',
+            date:'18/05/2022',
+            icon:"coffee",
+            type: "Saidas"
         },
-        date:'14/01/2022',
-        type: 'Saidas'
-    },
-    {
-        id:'3',
-        title:'Pichau Games',
-        amount:'$2.000,00',
-        categoryname: {
-            name:'Vendas',
-            icon:'shopping-cart'
+        {
+            id:"3",
+            title:'Teclado',
+            amount:'R$ 250,00',
+            description:'Tecnologia',
+            date:'18/05/2022',
+            icon:"shopping-bag",
+            type: "Saidas"
         },
-        date:'10/01/2022',
-        type: 'Saidas'
-    },
-    {
-        id:'4',
-        title:'Desenvolvimento de App',
-        amount:'$15.000,00',
-        categoryname: {
-            name:'Vendas',
-            icon:'dollar-sign'
-        },
-        date:'14/01/2022',
-        type: 'Entradas'    
-    },
-    {
-        id:'5',
-        title:'Desenvolvimento de App',
-        amount:'$15.000,00',
-        categoryname: {
-            name:'Vendas',
-            icon:'dollar-sign'
-        },
-        date:'14/01/2022',
-        type: 'Entradas'
-    },
-]
+        {
+            id:"4",
+            title:'Hamburguer',
+            amount:'R$ 50,00',
+            description:'Compras',
+            date:'18/05/2022',
+            icon:"shopping-cart",
+            type: "Saidas"
+        }
+    ]
